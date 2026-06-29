@@ -1,0 +1,1102 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bangla Origin - Rooted in Districts, Crafted for You</title>
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts (Hind Siliguri for beautiful Bengali typography) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary-green: #014323;
+            --accent-green: #005a32;
+            --light-green: #e6f0eb;
+            --text-dark: #333333;
+            --text-muted: #666666;
+            --card-bg: #f9f9f9;
+            --border-color: #e5e5e5;
+            --orange-accent: #d14d32;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Hind Siliguri', sans-serif;
+        }
+
+        body {
+            background-color: #fcfcfc;
+            color: var(--text-dark);
+            overflow-x: hidden;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+
+        /* --- 1. Top Utility Bar --- */
+        .top-bar {
+            background-color: #f4f4f4;
+            font-size: 13px;
+            border-bottom: 1px solid var(--border-color);
+            padding: 8px 0;
+            color: var(--text-muted);
+        }
+
+        .top-bar .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .top-bar-left, .top-bar-right {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+        }
+
+        .top-bar i {
+            margin-right: 5px;
+            color: var(--primary-green);
+        }
+
+        /* --- 2. Main Header --- */
+        .main-header {
+            padding: 15px 0;
+            background: #fff;
+        }
+
+        .main-header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .logo h1 {
+            font-size: 32px;
+            color: var(--primary-green);
+            font-weight: 700;
+            line-height: 1;
+        }
+
+        .logo h1 span {
+            color: var(--orange-accent);
+        }
+
+        .logo p {
+            font-size: 12px;
+            color: var(--text-muted);
+            letter-spacing: 0.5px;
+        }
+
+        .search-box {
+            display: flex;
+            width: 45%;
+            position: relative;
+        }
+
+        .search-box input {
+            width: 100%;
+            padding: 10px 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px 0 0 4px;
+            font-size: 14px;
+            outline: none;
+        }
+
+        .search-box button {
+            background-color: var(--primary-green);
+            color: white;
+            border: none;
+            padding: 0 20px;
+            border-radius: 0 4px 4px 0;
+            cursor: pointer;
+        }
+
+        .header-actions {
+            display: flex;
+            gap: 20px;
+            font-size: 15px;
+        }
+
+        .header-actions a i {
+            font-size: 18px;
+            margin-right: 5px;
+            color: var(--text-dark);
+        }
+
+        /* --- 3. Main Navigation --- */
+        .main-nav {
+            background-color: var(--primary-green);
+            color: white;
+        }
+
+        .main-nav .container {
+            display: flex;
+            align-items: center;
+        }
+
+        .categories-dropdown {
+            background-color: #003319;
+            padding: 12px 25px;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            cursor: pointer;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            margin-left: 20px;
+        }
+
+        .nav-links li a {
+            display: block;
+            padding: 12px 20px;
+            color: #e0e0e0;
+            font-weight: 500;
+            transition: 0.3s;
+        }
+
+        .nav-links li a:hover, .nav-links li.active a {
+            color: white;
+            background-color: var(--accent-green);
+        }
+
+        /* --- 4. Hero Banner Section --- */
+        .hero-section {
+            background-color: #f1ebd9;
+            background-image: radial-gradient(circle at right, #ebdcb9 40%, transparent 70%);
+            position: relative;
+            overflow: hidden;
+            padding: 40px 0;
+        }
+
+        .hero-section .container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            min-height: 400px;
+        }
+
+        .hero-text {
+            width: 50%;
+            z-index: 2;
+        }
+
+        .hero-text h2 {
+            font-size: 42px;
+            color: var(--primary-green);
+            font-weight: 700;
+            line-height: 1.3;
+        }
+
+        .hero-text h2 span {
+            color: #b92b27;
+            display: block;
+            font-size: 48px;
+            margin-top: 5px;
+        }
+
+        .hero-text p {
+            font-size: 18px;
+            margin: 15px 0 30px 0;
+            color: #444;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 15px;
+        }
+
+        .btn-primary {
+            background-color: var(--primary-green);
+            color: white;
+            padding: 10px 25px;
+            border-radius: 4px;
+            font-weight: 600;
+        }
+
+        .btn-secondary {
+            background-color: transparent;
+            color: var(--primary-green);
+            border: 1px solid var(--primary-green);
+            padding: 10px 25px;
+            border-radius: 4px;
+            font-weight: 600;
+        }
+
+        .hero-image-wrapper {
+            width: 45%;
+            position: relative;
+            display: flex;
+            justify-content: center;
+        }
+
+        /* Placeholder graphic looking like the textiles and clay pot setup in 1000046017.png */
+        .hero-image-placeholder {
+            width: 100%;
+            height: 350px;
+            background: linear-gradient(135deg, #a63a2b 30%, #2b614d 30%, #2b614d 60%, #b8860b 60%);
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-image-placeholder::after {
+            content: '';
+            position: absolute;
+            bottom: 20px;
+            right: 40px;
+            width: 120px;
+            height: 150px;
+            background-color: #cd853f;
+            border-radius: 50% 50% 40% 40%;
+            border: 4px solid #8b4513;
+        }
+
+        .slider-dots {
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+            margin-top: -20px;
+            position: relative;
+            z-index: 10;
+            padding-bottom: 20px;
+        }
+
+        .dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: #ccc;
+            cursor: pointer;
+        }
+
+        .dot.active {
+            background-color: var(--primary-green);
+            width: 25px;
+            border-radius: 5px;
+        }
+
+        /* --- 5. Trust Badges --- */
+        .trust-badges {
+            margin: -30px 0 40px 0;
+            position: relative;
+            z-index: 20;
+        }
+
+        .badges-wrapper {
+            background: white;
+            border-radius: 10px;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+        }
+
+        .badge-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            width: 18%;
+        }
+
+        .badge-item i {
+            font-size: 28px;
+            color: #b28751;
+        }
+
+        .badge-text h4 {
+            font-size: 14px;
+            color: #222;
+            font-weight: 600;
+        }
+
+        .badge-text p {
+            font-size: 11px;
+            color: var(--text-muted);
+        }
+
+        /* --- 6. Section Headers --- */
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            border-bottom: 2px solid var(--light-green);
+            padding-bottom: 10px;
+        }
+
+        .section-header h3 {
+            font-size: 22px;
+            color: var(--primary-green);
+            font-weight: 700;
+        }
+
+        .view-all {
+            color: var(--primary-green);
+            font-weight: 600;
+            font-size: 14px;
+        }
+
+        /* --- 7. Shop by District Carousel Area --- */
+        .district-section {
+            margin-bottom: 40px;
+            position: relative;
+        }
+
+        .carousel-container {
+            display: flex;
+            gap: 15px;
+            overflow-x: auto;
+            scrollbar-width: none; /* Hide scrollbar for Firefox */
+            padding: 5px 0;
+        }
+
+        .carousel-container::-webkit-scrollbar {
+            display: none; /* Hide scrollbar for Chrome/Safari */
+        }
+
+        .district-card {
+            min-width: 154px;
+            background: white;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            text-align: center;
+            padding-bottom: 12px;
+            overflow: hidden;
+            transition: transform 0.3s;
+        }
+
+        .district-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+        }
+
+        .district-img-placeholder {
+            width: 100%;
+            height: 110px;
+            background-color: #eee;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            color: #999;
+        }
+
+        /* Custom colored blocks mimicking imagery in 1000046017.png */
+        .img-jamalpur { background: #e09f9f; }
+        .img-sirajganj { background: #9fc2e0; }
+        .img-tangail { background: #dec39f; }
+        .img-bogura { background: #eaeaea; }
+        .img-rajshahi { background: #f0e69e; }
+        .img-cumilla { background: #eae4d8; }
+        .img-narail { background: #d0c0a8; }
+
+        .district-card h4 {
+            font-size: 15px;
+            margin-top: 10px;
+            font-weight: 600;
+        }
+
+        .district-card p {
+            font-size: 12px;
+            color: var(--text-muted);
+        }
+
+        .nav-arrow {
+            position: absolute;
+            top: 55%;
+            transform: translateY(-50%);
+            width: 35px;
+            height: 35px;
+            background: white;
+            border: 1px solid var(--border-color);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            z-index: 10;
+        }
+
+        .arrow-left { left: -15px; }
+        .arrow-right { right: -15px; }
+
+        /* --- 8. Popular Products Section --- */
+        .products-section {
+            margin-bottom: 40px;
+        }
+
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            gap: 15px;
+        }
+
+        .product-card {
+            background: white;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .product-img-placeholder {
+            width: 100%;
+            height: 140px;
+            background-color: #f5f5f5;
+        }
+
+        .product-info {
+            padding: 12px;
+        }
+
+        .product-title {
+            font-size: 14px;
+            font-weight: 600;
+            color: #222;
+            height: 40px;
+            overflow: hidden;
+            line-height: 1.4;
+        }
+
+        .product-price {
+            color: var(--primary-green);
+            font-weight: 700;
+            font-size: 16px;
+            margin: 5px 0;
+        }
+
+        .product-rating {
+            font-size: 11px;
+            color: #ffb400;
+            margin-bottom: 10px;
+        }
+
+        .product-rating span {
+            color: var(--text-muted);
+            margin-left: 3px;
+        }
+
+        .product-actions {
+            display: flex;
+            gap: 8px;
+        }
+
+        .btn-cart {
+            flex-grow: 1;
+            background-color: var(--primary-green);
+            color: white;
+            border: none;
+            padding: 6px;
+            border-radius: 4px;
+            font-size: 12px;
+            cursor: pointer;
+            font-weight: 500;
+        }
+
+        .btn-wishlist {
+            background: none;
+            border: 1px solid var(--border-color);
+            padding: 6px 10px;
+            border-radius: 4px;
+            cursor: pointer;
+            color: var(--text-muted);
+        }
+
+        /* --- 9. Artisan Story Banner --- */
+        .artisan-section {
+            margin-bottom: 50px;
+        }
+
+        .artisan-banner {
+            background-color: #e2ede7;
+            border-radius: 12px;
+            display: flex;
+            overflow: hidden;
+        }
+
+        .artisan-img-placeholder {
+            width: 30%;
+            background-color: #bcd2c4;
+            min-height: 250px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #555;
+            font-weight: bold;
+            position: relative;
+        }
+        
+        /* Simulating the needlework image motif */
+        .artisan-img-placeholder::before {
+            content: 'কারিগর';
+            font-size: 24px;
+            color: #014323;
+            opacity: 0.3;
+        }
+
+        .artisan-content {
+            width: 45%;
+            padding: 35px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .artisan-content h5 {
+            color: var(--text-muted);
+            font-size: 16px;
+            font-weight: 500;
+        }
+
+        .artisan-content h3 {
+            color: var(--primary-green);
+            font-size: 28px;
+            font-weight: 700;
+            margin: 5px 0 15px 0;
+        }
+
+        .artisan-content p {
+            font-size: 13px;
+            color: #555;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .artisan-stats {
+            width: 25%;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            padding: 20px;
+            align-items: center;
+            border-left: 1px solid rgba(0,0,0,0.05);
+        }
+
+        .stat-item {
+            text-align: center;
+            padding: 10px;
+        }
+
+        .stat-item i {
+            font-size: 22px;
+            color: var(--primary-green);
+            margin-bottom: 5px;
+        }
+
+        .stat-number {
+            font-size: 18px;
+            font-weight: 700;
+            color: #222;
+        }
+
+        .stat-label {
+            font-size: 12px;
+            color: var(--text-muted);
+        }
+
+        /* --- 10. Comprehensive Footer --- */
+        footer {
+            background-color: #002e18;
+            color: #b3cbbf;
+            padding: 50px 0 20px 0;
+            font-size: 14px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1.2fr 0.8fr 0.8fr 1.2fr 1fr;
+            gap: 30px;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+            padding-bottom: 30px;
+        }
+
+        .footer-about .logo h1 {
+            color: white;
+        }
+
+        .footer-about p {
+            margin-top: 15px;
+            font-size: 13px;
+            line-height: 1.6;
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 12px;
+            margin-top: 15px;
+        }
+
+        .social-icons a {
+            width: 32px;
+            height: 32px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            transition: 0.3s;
+        }
+
+        .social-icons a:hover {
+            background: var(--orange-accent);
+        }
+
+        .footer-links h4 {
+            color: white;
+            font-size: 16px;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        .footer-links ul {
+            list-style: none;
+        }
+
+        .footer-links ul li {
+            margin-bottom: 8px;
+        }
+
+        .footer-links ul li a:hover {
+            color: white;
+        }
+
+        .contact-info li {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            margin-bottom: 10px;
+        }
+
+        .contact-info i {
+            margin-top: 4px;
+            color: white;
+        }
+
+        .payment-methods h4 {
+            color: white;
+            font-size: 16px;
+            margin-bottom: 15px;
+        }
+
+        .payment-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 8px;
+        }
+
+        .pay-card {
+            background: white;
+            height: 40px;
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #222;
+            font-weight: bold;
+            font-size: 12px;
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            font-size: 13px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 1. Top Utility Bar -->
+    <div class="top-bar">
+        <div class="container">
+            <div class="top-bar-left">
+                <span><i class="fa-solid fa-truck"></i> সারা দেশে হোম ডেলিভারি</span>
+                <span><i class="fa-solid fa-certificate"></i> ১০০% অরিজিনাল পণ্য</span>
+                <span><i class="fa-solid fa-headset"></i> কাস্টমার সাপোর্ট</span>
+            </div>
+            <div class="top-bar-right">
+                <span>বাংলা | English</span>
+                <span>BDT ৳ <i class="fa-solid fa-chevron-down" style="font-size:10px;"></i></span>
+                <span><i class="fa-solid fa-user"></i> লগইন / রেজিস্টার</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- 2. Main Header -->
+    <header class="main-header">
+        <div class="container">
+            <div class="logo">
+                <h1>Bangla<span>origin</span></h1>
+                <p>Rooted in Districts, Crafted for You</p>
+            </div>
+            <div class="search-box">
+                <input type="text" placeholder="আপনার পছন্দের পণ্য খুঁজুন...">
+                <button><i class="fa-solid fa-magnifying-glass"></i></button>
+            </div>
+            <div class="header-actions">
+                <a href="#"><i class="fa-regular fa-heart"></i> ইচ্ছাসূচি</a>
+                <a href="#"><i class="fa-solid fa-basket-shopping"></i> কার্ট (0)</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- 3. Main Navigation Bar -->
+    <nav class="main-nav">
+        <div class="container">
+            <div class="categories-dropdown">
+                <i class="fa-solid fa-bars"></i> সকল বিভাগ
+            </div>
+            <ul class="nav-links">
+                <li class="active"><a href="#">হোম</a></li>
+                <li><a href="#">জেলা সমূহ</a></li>
+                <li><a href="#">পণ্য সমূহ</a></li>
+                <li><a href="#">কারিগরদের গল্প</a></li>
+                <li><a href="#">অফার</a></li>
+                <li><a href="#">ব্লগ</a></li>
+                <li><a href="#">যোগাযোগ</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- 4. Hero Banner Section -->
+    <section class="hero-section">
+        <div class="container">
+            <div class="hero-text">
+                <h2>বাংলাদেশের প্রতিটি জেলার<br>ঐতিহ্যবাহী পণ্য <span>এক জায়গায়</span></h2>
+                <p>গ্রামের কারিগরের হাতে তৈরি, আপনার জন্য গর্বের সংগ্রহ।</p>
+                <div class="hero-buttons">
+                    <a href="#" class="btn-primary">এখনই কিনুন</a>
+                    <a href="#" class="btn-secondary">জেলা সমূহ দেখুন</a>
+                </div>
+            </div>
+            <div class="hero-image-wrapper">
+                <div class="hero-image-placeholder"></div>
+            </div>
+        </div>
+    </section>
+    <div class="slider-dots">
+        <div class="dot active"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+    </div>
+
+    <!-- 5. Trust Badges -->
+    <div class="container trust-badges">
+        <div class="badges-wrapper">
+            <div class="badge-item">
+                <i class="fa-solid fa-award"></i>
+                <div class="badge-text">
+                    <h4>১০০% অরিজিনাল পণ্য</h4>
+                    <p>সরাসরি কারিগর/স্থানীয় প্রতিষ্ঠান থেকে সংগ্রহ</p>
+                </div>
+            </div>
+            <div class="badge-item">
+                <i class="fa-solid fa-truck-fast"></i>
+                <div class="badge-text">
+                    <h4>সারা দেশে ডেলিভারি</h4>
+                    <p>দ্রুত ও নিরাপদ ডেলিভারি</p>
+                </div>
+            </div>
+            <div class="badge-item">
+                <i class="fa-solid fa-shield-halved"></i>
+                <div class="badge-text">
+                    <h4>নিরাপদ পেমেন্ট</h4>
+                    <p>bKash, Nagad, Card সহ</p>
+                </div>
+            </div>
+            <div class="badge-item">
+                <i class="fa-solid fa-rotate-left"></i>
+                <div class="badge-text">
+                    <h4>সহজ রিটার্ন</h4>
+                    <p>নির্ধারিত সময়ের রিটার্ন সুবিধা</p>
+                </div>
+            </div>
+            <div class="badge-item">
+                <i class="fa-solid fa-headset"></i>
+                <div class="badge-text">
+                    <h4>কাস্টমার সাপোর্ট</h4>
+                    <p>আমরা আছি আপনার পাশে</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 6 & 7. Shop by District Carousel Area -->
+    <main class="container">
+        <section class="district-section">
+            <div class="section-header">
+                <h3>জেলা অনুযায়ী কেনাকাটা করুন</h3>
+                <a href="#" class="view-all">সব জেলা দেখুন <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+            <div class="nav-arrow arrow-left"><i class="fa-solid fa-chevron-left"></i></div>
+            <div class="nav-arrow arrow-right"><i class="fa-solid fa-chevron-right"></i></div>
+            
+            <div class="carousel-container">
+                <!-- Card 1 -->
+                <div class="district-card">
+                    <div class="district-img-placeholder img-jamalpur">নকশিকাঁথা নকশা</div>
+                    <h4>জামালপুর</h4>
+                    <p>নকশিকাঁথা</p>
+                </div>
+                <!-- Card 2 -->
+                <div class="district-card">
+                    <div class="district-img-placeholder img-sirajganj">লুঙ্গি প্যাটার্ন</div>
+                    <h4>সিরাজগঞ্জ</h4>
+                    <p>লুঙ্গি</p>
+                </div>
+                <!-- Card 3 -->
+                <div class="district-card">
+                    <div class="district-img-placeholder img-tangail">তাঁতের শাড়ি</div>
+                    <h4>টাঙ্গাইল</h4>
+                    <p>শাড়ি</p>
+                </div>
+                <!-- Card 4 -->
+                <div class="district-card">
+                    <div class="district-img-placeholder img-bogura">বগুড়ার দই পাত্র</div>
+                    <h4>বগুড়া</h4>
+                    <p>দই</p>
+                </div>
+                <!-- Card 5 -->
+                <div class="district-card">
+                    <div class="district-img-placeholder img-rajshahi">রাজশাহীর আম</div>
+                    <h4>রাজশাহী</h4>
+                    <p>আম</p>
+                </div>
+                <!-- Card 6 -->
+                <div class="district-card">
+                    <div class="district-img-placeholder img-cumilla">রসমালাই পাত্র</div>
+                    <h4>কুমিল্লা</h4>
+                    <p>রসমালাই</p>
+                </div>
+                <!-- Card 7 -->
+                <div class="district-card">
+                    <div class="district-img-placeholder img-narail">পিতলের কাজ</div>
+                    <h4>নড়াইল</h4>
+                    <p>পিতলের কাজ</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 8. Popular Products Section -->
+        <section class="products-section">
+            <div class="section-header">
+                <h3>জনপ্রিয় পণ্য</h3>
+                <a href="#" class="view-all">সব পণ্য দেখুন <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+            
+            <div class="products-grid">
+                <!-- Prod 1 -->
+                <div class="product-card">
+                    <div class="product-img-placeholder img-jamalpur"></div>
+                    <div class="product-info">
+                        <div class="product-title">জামালপুরের নকশিকাঁথা</div>
+                        <div class="product-price">৳ 2,450</div>
+                        <div class="product-rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><span>(45)</span></div>
+                        <div class="product-actions">
+                            <button class="btn-cart">কার্টে যোগ করুন</button>
+                            <button class="btn-wishlist"><i class="fa-regular fa-heart"></i></button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Prod 2 -->
+                <div class="product-card">
+                    <div class="product-img-placeholder img-sirajganj"></div>
+                    <div class="product-info">
+                        <div class="product-title">সিরাজগঞ্জের লুঙ্গি</div>
+                        <div class="product-price">৳ 650</div>
+                        <div class="product-rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><span>(32)</span></div>
+                        <div class="product-actions">
+                            <button class="btn-cart">কার্টে যোগ করুন</button>
+                            <button class="btn-wishlist"><i class="fa-regular fa-heart"></i></button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Prod 3 -->
+                <div class="product-card">
+                    <div class="product-img-placeholder img-tangail"></div>
+                    <div class="product-info">
+                        <div class="product-title">টাঙ্গাইলের তাঁত শাড়ি</div>
+                        <div class="product-price">৳ 1,250</div>
+                        <div class="product-rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><span>(28)</span></div>
+                        <div class="product-actions">
+                            <button class="btn-cart">কার্টে যোগ করুন</button>
+                            <button class="btn-wishlist"><i class="fa-regular fa-heart"></i></button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Prod 4 -->
+                <div class="product-card">
+                    <div class="product-img-placeholder img-bogura"></div>
+                    <div class="product-info">
+                        <div class="product-title">বগুড়ার মাটির হাড়ি (দই)</div>
+                        <div class="product-price">৳ 350</div>
+                        <div class="product-rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><span>(18)</span></div>
+                        <div class="product-actions">
+                            <button class="btn-cart">কার্টে যোগ করুন</button>
+                            <button class="btn-wishlist"><i class="fa-regular fa-heart"></i></button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Prod 5 -->
+                <div class="product-card">
+                    <div class="product-img-placeholder img-narail"></div>
+                    <div class="product-info">
+                        <div class="product-title">নড়াইল পিতলের কাজ</div>
+                        <div class="product-price">৳ 2,150</div>
+                        <div class="product-rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><span>(26)</span></div>
+                        <div class="product-actions">
+                            <button class="btn-cart">কার্টে যোগ করুন</button>
+                            <button class="btn-wishlist"><i class="fa-regular fa-heart"></i></button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Prod 6 -->
+                <div class="product-card">
+                    <div class="product-img-placeholder img-rajshahi"></div>
+                    <div class="product-info">
+                        <div class="product-title">রাজশাহীর আম (হিমসাগর)</div>
+                        <div class="product-price">৳ 1,100</div>
+                        <div class="product-rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><span>(31)</span></div>
+                        <div class="product-actions">
+                            <button class="btn-cart">কার্টে যোগ করুন</button>
+                            <button class="btn-wishlist"><i class="fa-regular fa-heart"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 9. Artisan Story Banner Section -->
+        <section class="artisan-section">
+            <div class="artisan-banner">
+                <div class="artisan-img-placeholder"></div>
+                <div class="artisan-content">
+                    <h5>কারিগরদের গল্প</h5>
+                    <h3>তাদের হাতেই আমাদের ঐতিহ্য</h3>
+                    <p>আমরা বিশ্বাস করি, প্রতিটি পণ্যের পেছনে আছে একজন কারিগরের স্বপ্ন, পরিশ্রম আর ভালোবাসা। তাই আমরা তাদের পাশে দাঁড়াই এবং তাদের তৈরি সেরা পণ্য পৌঁছে দিই আপনার কাছে।</p>
+                    <a href="#" class="btn-primary" style="width: max-content;">কারিগরদের সম্পর্কে জানুন</a>
+                </div>
+                <div class="artisan-stats">
+                    <div class="stat-item">
+                        <i class="fa-solid fa-map-location-dot"></i>
+                        <div class="stat-number">৬৪+</div>
+                        <div class="stat-label">জেলা</div>
+                    </div>
+                    <div class="stat-item">
+                        <i class="fa-solid fa-users"></i>
+                        <div class="stat-number">৫০০+</div>
+                        <div class="stat-label">কারিগর</div>
+                    </div>
+                    <div class="stat-item">
+                        <i class="fa-solid fa-box-open"></i>
+                        <div class="stat-number">৫,০০০+</div>
+                        <div class="stat-label">পণ্য</div>
+                    </div>
+                    <div class="stat-item">
+                        <i class="fa-solid fa-smile"></i>
+                        <div class="stat-number">১৫,০০০+</div>
+                        <div class="stat-label">সন্তুষ্ট গ্রাহক</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- 10. Footer Section -->
+    <footer>
+        <div class="container footer-grid">
+            <div class="footer-about">
+                <div class="logo">
+                    <h1>Bangla<span>origin</span></h1>
+                    <p style="color: #8da498;">Rooted in Districts, Crafted for You</p>
+                </div>
+                <p>বাংলাদেশের প্রতিটি জেলার ঐতিহ্যবাহী ও হাতের তৈরি পণ্য এক জায়গায়। স্থানীয় কারিগরদের সাথে আপনার জন্য।</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                    <a href="#"><i class="fa-brands fa-pinterest-p"></i></a>
+                    <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+                </div>
+            </div>
+            
+            <div class="footer-links">
+                <h4>দ্রুত লিঙ্ক</h4>
+                <ul>
+                    <li><a href="#">হোম</a></li>
+                    <li><a href="#">জেলা সমূহ</a></li>
+                    <li><a href="#">পণ্য সমূহ</a></li>
+                    <li><a href="#">কারিগরদের গল্প</a></li>
+                    <li><a href="#">অফার</a></li>
+                    <li><a href="#">যোগাযোগ</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-links">
+                <h4>সহায়তা</h4>
+                <ul>
+                    <li><a href="#">কীভাবে অর্ডার করবেন</a></li>
+                    <li><a href="#">ডেলিভারি তথ্য</a></li>
+                    <li><a href="#">রিটার্ন & রিফান্ড</a></li>
+                    <li><a href="#">প্রশ্নোত্তর (FAQ)</a></li>
+                    <li><a href="#">গোপনীয়তা নীতি</a></li>
+                    <li><a href="#">শর্তাবলী</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-links">
+                <h4>যোগাযোগ</h4>
+                <ul class="contact-info">
+                    <li><i class="fa-solid fa-phone"></i> 09678 123456</li>
+                    <li><i class="fa-solid fa-envelope"></i> info@banglaorigin.com</li>
+                    <li><i class="fa-solid fa-globe"></i> www.banglaorigin.com</li>
+                    <li><i class="fa-solid fa-location-dot"></i> বাড়ি # ৪২, রোড # ৬, ধানমন্ডি, ঢাকা-১২০৫, বাংলাদেশ</li>
+                </ul>
+            </div>
+
+            <div class="payment-methods">
+                <h4>পেমেন্ট মেথড</h4>
+                <div class="payment-grid">
+                    <div class="pay-card" style="background:#e2136e; color:white;">bkash</div>
+                    <div class="pay-card" style="background:#f37022; color:white;">Nagad</div>
+                    <div class="pay-card" style="color:#1a1f71;">VISA</div>
+                    <div class="pay-card" style="color:#eb001b;">mastercard</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="copyright">
+            © 2026 Bangla Origin. সকল স্বত্ব সংরক্ষিত।
+        </div>
+    </footer>
+
+</body>
+</html>
